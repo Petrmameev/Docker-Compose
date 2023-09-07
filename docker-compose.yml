@@ -5,8 +5,8 @@ services:
     build: ./app
     command: sh ./commands.sh
     volumes:
-      - static_volume:/home/app/web/static
-      - media_volume:/home/app/web/media
+      - static_volume:/app/static
+      - media_volume:/app/media
     depends_on:
       - postgres
     expose:
@@ -30,8 +30,8 @@ services:
     depends_on:
       - backend
     volumes:
-      - static_volume:/home/app/web/static
-      - media_volume:/home/app/web/media
+      - static_volume:/app/static
+      - media_volume:/app/media
     ports:
       - 80:80
 
