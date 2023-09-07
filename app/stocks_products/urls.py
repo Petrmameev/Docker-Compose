@@ -19,7 +19,7 @@ from django.urls import include, path
 from logistic.views import sample_view
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/v1/', include('logistic.urls')),
-    path('api/v1/test/', sample_view)
+    path("admin/", admin.site.urls),
+    path("api/v1/", include("logistic.urls")),
+    path("api/v1/test/", sample_view),
 ]
